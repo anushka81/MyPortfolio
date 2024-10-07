@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Anushka Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Anushka <span class="waving-hand">👋🏼</span> </a>
+
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Background</span></a></li>
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#research-section" class="nav-link"><span>Research</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section id="home-section" class="hero" align-items="center">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end">
+						<div class="one-third js-fullheight order-md-last img"
+							style="background-image:url(images/file.png);background-size: cover;background-size: 500px 570px;">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex  align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h1 class="mb-2 mt-3">I'm <span>Anushka</span></h1>
+
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+
+								<script>
+
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+
+									// Create an array of typing text
+									const typingTexts = [
+										'Student  ',
+										' Software Engineer  ',
+									];
+
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 200); // Increase the delay to slow down the typing animation
+										}
+
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
+
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+								<!-- <br> -->
+								<p><a href="https://www.linkedin.com/in/anushka-girdhar-815217229/"
+										class="btn btn-primary py-3 px-4">Linkedin</a>
+									<a href="https://drive.google.com/file/d/1W_QNxGGDmbNBoCA-GxHyrS32nD0mLSkz/view?usp=drive_link "
+										class="btn btn-white btn-outline-white py-3 px-4">Resume</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								<h2 class="mb-4">About Me</h2>
+								<p>Hi, I’m Anushka, a software developer who loves turning ideas into real-world
+									solutions. I’ve built projects from web apps to AI models, focusing on creating
+									efficient, user-friendly systems. Always learning and experimenting with new tech to
+									keep things exciting!</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Software Developer</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Technology in Computer
+											Science</span></li>
+									<li class="d-flex"><span>University:</span> <span>Indira Gandhi Delhi Technical
+											University for Women</span></li>
+									<li class="d-flex"><span>Skills:</span> <span>Java, Python, C#, ReactJS, NodeJS,
+											MongoDB, ExpressJS, HTML, CSS, Azure, Git</span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<!-- <div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="10">0</span> <span>+</span>
+									<span>&nbsp; Projects</span>
+								</p>
+							</div> -->
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-12 d-flex justify-content-center align-items-center">
+										<div class="about-img rounded b-shadow-a"
+											style="background-color: rgb(0, 0, 0); height: 401px; width: 431px; padding-left: 15px;">
+											<div class="img-container">
+												<img src="images/gif.gif" class="img-fluid"
+													style="width: 100%; height: auto; object-fit: cover;">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h2 class="mb-4">Background</h2>
+					<p>This section contains a brief overview of my background, highlighting my skills and experiences.
+					</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">June 2024 - July 2024</span>
+						<h2>Microsoft</h2>
+						<span class="position">Software Engineer Intern</span>
+						<p class="mt-4">
+						<ul>
+							<li>Optimized data flow in Microsoft Teams using filters for efficient processing.</li>
+							<li>Developed and deployed new flows with unit and end-to-end tests.</li>
+							<li>Tech Stack: Azure Portal, Geneva, C#, and internal tools.</li>
+						</ul>
+						</p>
+
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">June 2022 - July 2022</span>
+						<h2>IGDTUW</h2>
+						<span class="position">Research Intern</span>
+						<p class="mt-4">
+						<ul>
+							<li>Conducted research on microarray datasets to develop a cancer classification model using
+								logistic regression and neural networks.</li>
+							<li>Successfully differentiated between AML and ALL cancer types in the classification model
+								with high accuracy.</li>
+						</ul>
+						</p>
+
+					</div>
+
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+			<div class="row">
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2021-2025</span>
+						<h2>Bachelor of Technology in Computer Science</h2>
+						<span class="position">IGDTUW</span>
+						<p class="mt-4">New Delhi, India</p>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2020-2021</span>
+						<h2>Class XII, Central Board of Secondary Education(CBSE)</h2>
+						<span class="position">Hansraj Model School, New Delhi, India</span>
+						<p class="mt-4">Percentage: 88.6% JEE Mains: 96.4 percentile</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h2 class="mb-4">Projects</h2>
+					<p>Below are some of my major projects</p>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/anushka81/EmbraceMe" class="block-20 zoom-effect"
+							style="background-color: rgb(81, 82, 63); display: flex; justify-content: center; align-items: center;  text-decoration: none;">
+							<img src="images/embraceMe.png" alt="Embrace Me"
+								style="width: 100%; height: auto; margin-top: 10px;">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://github.com/anushka81/EmbraceMe">Embrace Me</a></h3>
+							<p>EmbraceMe empowers individuals with disabilities by fostering self-acceptance and
+								confidence through support services and a vibrant online community. It provides
+								resources and events tailored to promote personal growth and social interaction.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/nitishhrms/image_captioning" class="block-20 zoom-effect"
+							style="background-color: rgb(81, 82, 63); display: flex; justify-content: center; align-items: center;  text-decoration: none;">
+							<img src="images/imagecapt.png" alt="Embrace Me"
+								style="width: 100%; height: auto; margin-top: 10px;">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://github.com/nitishhrms/image_captioning">Image
+									Captioning</a></h3>
+							<p>Created an AI-based model that merges CNNs and LSTMs to generate image captions,
+								translating visual data into descriptive text.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://makizenin2718.itch.io/avy-dsg-2022-apocalypse-survivor-fps"
+							class="block-20 zoom-effect"
+							style="background-color: rgb(81, 82, 63); display: flex; justify-content: center; align-items: center;  text-decoration: none;">
+							<img src="images/image.png" alt="Embrace Me"
+								style="width: 100%; height: auto; margin-top: 10px;">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://makizenin2718.itch.io/avy-dsg-2022-apocalypse-survivor-fps">Apocalypse
+									Survivor Game</a></h3>
+							<p>Developed and hosted a first-person zombie shooting game using Unity and C#, featuring
+								weapon selection, enemy AI, and level progression.
+
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<!-- added justify-content-center to center align the last two projects
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a></h3>
+				  <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a></h3>
+				  <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
+				</div>
+			  </div>
+			</div>
+		 </div> -->
+		</div>
+	</section>
+
+	<!-- PUBLICATIONS -->
+
+	<section class="ftco-section" id="research-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h2 class="mb-4">Publications</h2>
+					<p>Here are some of the research papers I worked on.</p>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://publications.eai.eu/index.php/phat/article/view/4336">Enhancing Image
+									Recognition: Leveraging Machine Learning on Medical Datasets</a></h3>
+							<p>Presented at an international conference, this research focuses on improving image
+								recognition in specialized medical datasets using machine learning models.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://link.springer.com/chapter/10.1007/978-3-031-35078-8_37">Movie
+									Recommendation System using Content-Based and Filtering Approach</a></h3>
+							<p>This publication outlines the development of a recommendation system that combines
+								content-based filtering techniques to provide personalized movie suggestions.
+
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry">
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://link.springer.com/chapter/10.1007/978-3-031-35078-8_22">Predicting
+									Credit Card Defaults with Machine Learning Algorithm Using Customer Database
+								</a></h3>
+							<p>Developing a credit card default prediction model using various decision trees to assess
+								potential defaulters by analyzing credit card usage data.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<!-- added justify-content-center to center align the last two projects
+		  <div class="row d-flex justify-content-center">  
+			  <div class="col-md-4 d-flex ftco-animate">
+				  <div class="blog-entry justify-content-end">
+				  <a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+	
+					<h3 class="heading"><a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a></h3>
+					<p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-4 d-flex ftco-animate">
+				  <div class="blog-entry justify-content-end">
+				  <a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+	
+					<h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a></h3>
+					<p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
+				  </div>
+				</div>
+			  </div>
+		   </div> -->
+		</div>
+		<div class="row justify-content-center mt-2">
+			<div class="col-md-6 text-center ftco-animate">
+				<p><a href="https://www.researchgate.net/profile/Anushka-Girdhar-2"
+						class="btn btn-primary py-4 px-5">Research Gate</a></p>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h2 class="mb-4">Get in Touch</h2>
+					<p>Got a question or just want to chat? Feel free to reach out!</p>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p>Delhi, India</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="tel://0101010101">+91 8851817026</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="mailto:anushkahrms@gmail.com">anushkahrms@gmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<h3 class="mb-4">Download Resume</h3>
+						<p><a
+								href="https://drive.google.com/file/d/1W_QNxGGDmbNBoCA-GxHyrS32nD0mLSkz/view?usp=drive_link ">Resume</a>
+						</p>
+					</div>
+				</div>
+
+				<div class="container">
+
+					<div class="row justify-content-center">
+						<!-- <div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div> -->
+					</div>
+
+					<form name="contact" method="POST" data-netlify="true" class="php-email-form mt-4">
+						<input type="hidden" name="form-name" value="contact">
+						<div class="row">
+							<div class="col-md-6 form-group">
+								<input type="text" name="name" class="form-control" placeholder="Name" required>
+							</div>
+							<div class="col-md-6 form-group mt-3 mt-md-0">
+								<input type="email" name="email" class="form-control" placeholder="Email" required>
+							</div>
+						</div>
+						<div class="form-group mt-3">
+							<input type="text" name="subject" class="form-control" placeholder="Subject" required>
+						</div>
+						<div class="form-group mt-3">
+							<textarea class="form-control" name="message" rows="5" placeholder="Message"
+								required></textarea>
+						</div>
+						<div class="my-3">
+							<div class="loading">Loading</div>
+							<div class="error-message"></div>
+							<div class="sent-message">Your message has been sent. Thank you!</div>
+						</div>
+						<div class="text-center">
+							<button type="submit" class="btn btn-primary py-4 px-5" >Let's Talk</button>
+						</div>
+					</form>
+
+					<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						<li class="ftco-animate normal-txt">Connect Now</li>
+						<li class="ftco-animate"><a href="https://github.com/anushka81"><span
+									class="icon-github"></span></a></li>
+						<li class="ftco-animate"><a href="https://www.linkedin.com/in/anushka-girdhar-815217229/"><span
+									class="icon-linkedin"></span></a></li>
+						<!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li> -->
+						<!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-facebook"></span></a></li> -->
+						<!-- <li class="ftco-animate"><a href="https://www.instagram.com/rishabhnmishra/"><span class="icon-instagram"></span></a></li> -->
+					</ul>
+					<br>
+				</div>
+			</div>
+
+	</section>
+
+
+
+
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
